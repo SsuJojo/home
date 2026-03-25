@@ -378,6 +378,7 @@ a.jump:active {
         width: calc(100vw - 24px) !important;
         margin-left: 12px !important;
         margin-right: 12px !important;
+        transform: none !important;
     }
 
     .jt>.body>div {

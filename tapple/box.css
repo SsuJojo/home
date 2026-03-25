@@ -100,7 +100,16 @@ body {
 }
 @media (max-width: 900px){
     .fx.h{
-        transform: translate(0,var(--translate));
+        transform: none;
+    }
+
+    .stop-center.stop,
+    .lock.show,
+    .trans.b-s.show,
+    .trans.b-s.stop-center,
+    .trans.s-b.show,
+    .trans.s-b.stop-center {
+        transform: none !important;
     }
 }
 .stop-center.stop{
