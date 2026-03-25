@@ -1,6 +1,7 @@
-html {
-    background: #222 url(bg-lowerspeed.jpg) center center / cover no-repeat fixed;
+html,
+body {
     min-height: 100%;
+    background: #222;
 }
 
 body {
@@ -9,17 +10,21 @@ body {
     background-color: transparent
 }
 
-html.win12 {
+#bg-fixed {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: #222 url(bg-lowerspeed.jpg) center center / cover no-repeat;
+    pointer-events: none;
+    transform: translateZ(0);
+}
+
+body.win12 #bg-fixed {
     background-image: url(win12.svg)
 }
 
-html.nikov {
+body.nikov #bg-fixed {
     background-image: url(nikov.svg)
-}
-
-body.win12,
-body.nikov {
-    background: transparent
 }
 
 .a {

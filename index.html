@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="bg-fixed"></div>
     <!-- <script>windowWidth = document.documentElement.clientWidth || document.body.clientWidth, windowHeight = document.documentElement.clientHeight || document.body.clientHeight, windowHeight >= windowWidth && (window.location.href = "/m")</script> -->
     <div id="loadback"
         style="background-color:#000;width:100%;height:100%;z-index:105;position:fixed;transition:5s;top:0;left:0;color:#d2d2d2">
@@ -216,7 +217,6 @@
     <script src="/tapple/scroll.js"></script>
     <script>
         my_scroll = e => { e == 0 ? ($("#title>.su").css("transform", `translateY(100px)`), $("#title>.su").css("opacity", `0`), $("#title>.jiu").css("transform", `translateY(100px)`), $("#title>.jiu").css("opacity", `0`), $("#title>.text").css("transform", `translateY(50px)`), $("#title>.text").css("opacity", `0`)) : 0 < e && e < 100 ? ($("#title>.su").css("transform", `translateY(${100 - e}px)`), $("#title>.su").css("opacity", `${e / 100}`), $("#title>.jiu").css("transform", `translateY(100px)`), $("#title>.jiu").css("opacity", `0`)) : e >= 100 && e < 200 ? ($("#title>.su").css("transform", `translateY(0)`), $("#title>.su").css("opacity", `1`), $("#title>.jiu").css("transform", `translateY(${200 - e}px)`), $("#title>.jiu").css("opacity", `${(e - 100) / 100}`), $("#title>.text").css("transform", `translateY(50px)`), $("#title>.text").css("opacity", `0`)) : e >= 200 && e < 300 ? ($("#title>.jiu").css("transform", `translateY(0)`), $("#title>.jiu").css("opacity", `1`), $("#title>.text").css("transform", `translateY(0)`), $("#title>.text").css("opacity", `1`), $("#title").show(200)) : e < 400 ? ($("#title>.su").css("transform", `translateY(0)`), $("#title>.su").css("opacity", `1`), $("#title>.jiu").css("transform", `translateY(0)`), $("#title>.jiu").css("opacity", `1`), $("#title>.text").css("transform", `translateY(0)`), $("#title>.text").css("opacity", `1`), $("#title").show(200)) : $("#title").hide(200); /*const t = $("#win12")[0]; e < t.offsetTop + t.offsetHeight && t.offsetTop - ph < e ? $("body").hasClass("win12") || $("body").addClass("win12") : $("body").removeClass("win12"); const n = $("#nikov")[0]; e < n.offsetTop + n.offsetHeight && n.offsetTop - ph < e ? $("body").hasClass("nikov") || $("body").addClass("nikov") : $("body").removeClass("nikov") */ };
-        document.documentElement.className = document.body.className;
     </script>
 </body>
 
