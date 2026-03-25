@@ -328,3 +328,71 @@ a.jump:active {
 .box.text {
     color: #fff
 }
+
+@media (max-width: 700px) {
+    #title {
+        width: calc(100vw - 24px);
+        height: 210px;
+        top: calc(50% - 105px);
+    }
+
+    #title>.su {
+        width: min(180px, 50vw);
+    }
+
+    #title>.jiu {
+        width: min(128px, 36vw);
+        left: min(118px, 36vw);
+    }
+
+    #title>.text.chinese {
+        font-size: clamp(30px, 8vw, 40px);
+        top: 92px;
+        left: min(136px, 40vw);
+    }
+
+    #title>.text.eng {
+        font-size: clamp(14px, 4vw, 20px);
+        top: 160px;
+        left: 10px;
+    }
+
+    .scroll-tip {
+        top: 12px;
+        min-width: 0;
+        padding: 6px 10px;
+        background: rgba(0, 0, 0, 0.28);
+        box-shadow: none;
+        backdrop-filter: blur(4px);
+        border-color: rgba(255, 255, 255, 0.12);
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .scroll-tip>.eng {
+        font-size: 12px;
+        margin-top: 1px;
+    }
+
+    .card {
+        width: calc(100vw - 24px) !important;
+        margin-left: 12px !important;
+        margin-right: 12px !important;
+    }
+
+    .jt>.body>div {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .jt>.body>div>div {
+        width: 100%;
+    }
+
+    .eng {
+        width: auto;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+    }
+}
