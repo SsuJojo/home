@@ -334,6 +334,7 @@ a.jump:active {
         width: calc(100vw - 24px);
         height: 210px;
         top: calc(50% - 105px);
+        transform: translateX(-44%);
     }
 
     #title>.su {
@@ -348,8 +349,7 @@ a.jump:active {
     #title>.text.chinese {
         font-size: clamp(30px, 8vw, 40px);
         top: 92px;
-        left: 50%;
-        transform: translateX(-6%);
+        left: min(136px, 40vw);
         white-space: nowrap;
     }
 
