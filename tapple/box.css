@@ -98,6 +98,11 @@ body {
     --speed:5;
     transform: translate(calc((var(--scroll) - 50%) * var(--speed)),var(--translate));
 }
+@media (max-width: 900px){
+    .fx.h{
+        transform: translate(0,var(--translate));
+    }
+}
 .stop-center.stop{
     transform: none !important;
 }
