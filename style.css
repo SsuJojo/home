@@ -348,9 +348,11 @@ a.jump:active {
     #title>.text.chinese {
         font-size: clamp(30px, 8vw, 40px);
         top: 92px;
-        left: 50%;
-        transform: translateX(-6%);
+        left: auto;
+        right: 8px;
+        transform: none;
         white-space: nowrap;
+        text-align: right;
     }
 
     #title>.text.eng {
