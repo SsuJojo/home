@@ -99,22 +99,17 @@ body {
     transform: translate(calc((var(--scroll) - 50%) * var(--speed)),var(--translate));
 }
 @media (max-width: 900px){
-    .fx.h,
-    .lock,
+    .fx.h{
+        transform: none;
+    }
+
+    .stop-center.stop,
     .lock.show,
-    .trans.b-s,
     .trans.b-s.show,
     .trans.b-s.stop-center,
-    .trans.s-b,
     .trans.s-b.show,
-    .trans.s-b.stop-center,
-    .trans.float,
-    .trans.float.show,
-    .stop-center,
-    .stop-center.stop {
-        opacity: 1 !important;
+    .trans.s-b.stop-center {
         transform: none !important;
-        transition: none !important;
     }
 }
 .stop-center.stop{
