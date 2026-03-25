@@ -13,7 +13,7 @@
     <!-- <script>var _hmt = _hmt || []; (function () { var e, t = document.createElement("script"); t.src = "https://hm.baidu.com/hm.js?c392a0a8110e6d1f1fe78ed7e7406dfe", e = document.getElementsByTagName("script")[0], e.parentNode.insertBefore(t, e) })()</script> -->
 </head>
 
-<body>
+<body onload="window.scrollTo(0,0)">
     <div id="bg-fixed"></div>
     <!-- <script>windowWidth = document.documentElement.clientWidth || document.body.clientWidth, windowHeight = document.documentElement.clientHeight || document.body.clientHeight, windowHeight >= windowWidth && (window.location.href = "/m")</script> -->
     <div id="loadback"
@@ -47,7 +47,7 @@
         <p class="eng text">------ SsuJo_'s website ------</p>
     </div>
     <script src="/tapple/jq.min.js"></script>
-    <p style="width:100px;left:calc(50% - 50px);position:absolute;top:0;text-align:center">往下滑...<span
+    <p class="scroll-tip">往下滑<span class="scroll-tip-arrow">↓</span><span
             class="eng">Scroll down...</span></p>
     <div class="box card fx h func" style="--speed:5;width:50%;margin-left:25%;margin-top:calc(var(--ph) * 2)">
         <p class="tit">你好!👋<span class="eng">Hello!👋</span></p>
@@ -217,6 +217,7 @@
     <script src="/tapple/scroll.js"></script>
     <script>
         my_scroll = e => { e == 0 ? ($("#title>.su").css("transform", `translateY(100px)`), $("#title>.su").css("opacity", `0`), $("#title>.jiu").css("transform", `translateY(100px)`), $("#title>.jiu").css("opacity", `0`), $("#title>.text").css("transform", `translateY(50px)`), $("#title>.text").css("opacity", `0`)) : 0 < e && e < 100 ? ($("#title>.su").css("transform", `translateY(${100 - e}px)`), $("#title>.su").css("opacity", `${e / 100}`), $("#title>.jiu").css("transform", `translateY(100px)`), $("#title>.jiu").css("opacity", `0`)) : e >= 100 && e < 200 ? ($("#title>.su").css("transform", `translateY(0)`), $("#title>.su").css("opacity", `1`), $("#title>.jiu").css("transform", `translateY(${200 - e}px)`), $("#title>.jiu").css("opacity", `${(e - 100) / 100}`), $("#title>.text").css("transform", `translateY(50px)`), $("#title>.text").css("opacity", `0`)) : e >= 200 && e < 300 ? ($("#title>.jiu").css("transform", `translateY(0)`), $("#title>.jiu").css("opacity", `1`), $("#title>.text").css("transform", `translateY(0)`), $("#title>.text").css("opacity", `1`), $("#title").show(200)) : e < 400 ? ($("#title>.su").css("transform", `translateY(0)`), $("#title>.su").css("opacity", `1`), $("#title>.jiu").css("transform", `translateY(0)`), $("#title>.jiu").css("opacity", `1`), $("#title>.text").css("transform", `translateY(0)`), $("#title>.text").css("opacity", `1`), $("#title").show(200)) : $("#title").hide(200); /*const t = $("#win12")[0]; e < t.offsetTop + t.offsetHeight && t.offsetTop - ph < e ? $("body").hasClass("win12") || $("body").addClass("win12") : $("body").removeClass("win12"); const n = $("#nikov")[0]; e < n.offsetTop + n.offsetHeight && n.offsetTop - ph < e ? $("body").hasClass("nikov") || $("body").addClass("nikov") : $("body").removeClass("nikov") */ };
+        window.addEventListener('pageshow', () => window.scrollTo(0, 0));
     </script>
 </body>
 

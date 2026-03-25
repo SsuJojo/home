@@ -124,6 +124,61 @@ a.jump:active {
     left: 50px
 }
 
+.scroll-tip {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    z-index: 2;
+    min-width: 132px;
+    padding: 10px 14px;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #00000070, #00000030);
+    border: 1px solid #ffffff24;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px #00000030;
+    letter-spacing: 1px;
+    animation: scroll-tip-float 1.8s ease-in-out infinite;
+}
+
+.scroll-tip>.eng {
+    margin: 2px auto 0;
+    padding: 0;
+    width: auto;
+    border: 0;
+}
+
+.scroll-tip-arrow {
+    display: inline-block;
+    margin-left: 6px;
+    color: #8fd3ff;
+    animation: scroll-tip-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes scroll-tip-float {
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(4px);
+    }
+}
+
+@keyframes scroll-tip-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
 .eng {
     font-size: calc(35% + 8px);
     display: block;
